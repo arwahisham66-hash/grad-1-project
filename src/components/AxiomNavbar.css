@@ -1,0 +1,196 @@
+.axiom-navbar { position:fixed; z-index:1100; inset:0 0 auto; height:86px; color:#f0f7ef; border-bottom:1px solid rgba(175,245,161,.1); transition:height .3s,background .3s,box-shadow .3s; }
+.axiom-navbar.is-scrolled { height:70px; background:rgba(7,14,9,.92); backdrop-filter:blur(20px); border-bottom-color:rgba(175,245,161,.2); box-shadow:0 15px 40px rgba(0,0,0,.18); }
+.axiom-nav-inner { width:min(1370px,calc(100% - 112px)); height:100%; margin:auto; display:flex; align-items:center; gap:28px; }
+.axiom-logo { color:inherit; display:flex; align-items:center; flex:none; gap:7px; text-decoration:none; font:700 27px 'Space Grotesk',sans-serif; letter-spacing:-.06em; white-space:nowrap; }.axiom-logo-symbol,.axiom-logo-period { color:#b9ff66; }.axiom-logo-symbol { font-size:26px; line-height:1; }.axiom-logo small { font:600 8px/1.15 'Space Grotesk',sans-serif; letter-spacing:.12em; color:#7fa485; width:70px; margin-left:2px; }
+.axiom-nav-links { display:flex; align-items:center; justify-content:center; gap:clamp(13px,1.8vw,29px); margin:auto; }.axiom-nav-links a { position:relative; color:#9aae9e; text-decoration:none; white-space:nowrap; font:600 11px 'Space Grotesk',sans-serif; transition:color .2s; }.axiom-nav-links a:hover,.axiom-nav-links a.active { color:#e9f8e7; }.axiom-nav-links a.active::after { content:''; position:absolute; width:4px; height:4px; border-radius:50%; background:#b9ff66; left:calc(50% - 2px); bottom:-13px; box-shadow:0 0 10px #b9ff66; }
+.axiom-nav-actions { display:flex; align-items:center; gap:12px; flex:none; }.language-button { border:1px solid rgba(179,245,164,.18); background:rgba(185,255,102,.04); color:#bad2ba; height:35px; display:flex; align-items:center; gap:8px; padding:0 10px; cursor:pointer; font:700 10px 'Space Grotesk',sans-serif; }.language-button:hover { border-color:#b9ff66; color:#b9ff66; }.nav-cta { display:flex; align-items:center; gap:13px; padding:11px 14px; background:#b9ff66; color:#071006; text-decoration:none; font:700 11px 'Space Grotesk',sans-serif; white-space:nowrap; transition:background .2s,transform .2s; }.nav-cta:hover { background:#d1ff9c; transform:translateY(-2px); }.menu-button { display:none; border:1px solid rgba(179,245,164,.25); width:39px; height:39px; background:#132018; color:#b9ff66; cursor:pointer; place-items:center; }
+@media(max-width:1180px) { .axiom-nav-inner { width:min(100% - 64px,1370px); gap:17px; }.axiom-logo small { display:none; }.axiom-nav-links { gap:13px; }.axiom-nav-links a { font-size:10px; } }
+@media(max-width:900px) { .axiom-nav-inner { width:calc(100% - 42px); }.axiom-nav-links { display:none; position:absolute; top:100%; left:0; right:0; padding:20px 25px 25px; background:rgba(8,18,11,.98); border-bottom:1px solid rgba(179,245,164,.25); flex-direction:column; align-items:stretch; gap:0; }.axiom-nav-links.is-open { display:flex; }.axiom-nav-links a { padding:12px 0; font-size:13px; }.axiom-nav-links a.active::after { left:auto; right:0; top:18px; bottom:auto; }.axiom-nav-actions { margin-left:auto; }.menu-button { display:grid; } }
+@media(max-width:620px) { .axiom-navbar { height:75px; }.axiom-nav-inner { width:calc(100% - 34px); }.axiom-logo { font-size:23px; }.axiom-logo-symbol { font-size:22px; }.nav-cta { display:none; } }
+
+
+/* Slightly enlarge navbar text */
+.axiom-navbar a,
+.axiom-navbar button {
+  font-size: 16px;
+}
+
+.axiom-navbar .nav-links a {
+  font-size: 16px;
+}
+
+.axiom-navbar .nav-cta {
+  font-size: 15px;
+}
+
+.theme-toggle {
+  width: 38px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(179, 245, 164, 0.25);
+  background: rgba(185, 255, 102, 0.06);
+  color: #b9ff66;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.theme-toggle:hover {
+  border-color: #b9ff66;
+  background: rgba(185, 255, 102, 0.14);
+}
+
+
+/* Profile Menu */
+.profile-menu-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1200;
+}
+
+.profile-menu-trigger {
+  height: 38px;
+  min-width: 48px;
+  padding: 3px 8px 3px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid rgba(185, 255, 102, 0.25);
+  background: rgba(185, 255, 102, 0.06);
+  color: #b9ff66;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.profile-menu-trigger:hover,
+.profile-menu-trigger.is-open {
+  border-color: #b9ff66;
+  background: rgba(185, 255, 102, 0.13);
+}
+
+.profile-menu-avatar,
+.profile-dropdown-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #b9ff66;
+  color: #071006;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.profile-menu-avatar {
+  width: 29px;
+  height: 29px;
+}
+
+.profile-menu-trigger img {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-menu-trigger > svg {
+  width: 13px;
+  height: 13px;
+}
+
+.profile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  z-index: 2;
+  width: 245px;
+  padding: 14px;
+  background: #101c13;
+  border: 1px solid rgba(185, 255, 102, 0.2);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.4);
+}
+
+.profile-dropdown-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 5px 13px;
+}
+
+.profile-dropdown-avatar {
+  width: 39px;
+  height: 39px;
+  font-size: 14px;
+  object-fit: cover;
+}
+
+.profile-dropdown-user div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.profile-dropdown-user strong {
+  color: #f0f7ef;
+  font-size: 12px;
+}
+
+.profile-dropdown-user div span {
+  color: #91a596;
+  font-size: 10px;
+  overflow-wrap: anywhere;
+}
+
+.profile-dropdown-divider {
+  height: 1px;
+  margin: 7px 0;
+  background: rgba(185, 255, 102, 0.13);
+}
+
+.profile-dropdown > button {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 10px;
+  border: none;
+  background: transparent;
+  color: #cbd9cb;
+  font-family: inherit;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.profile-dropdown > button:hover {
+  background: rgba(185, 255, 102, 0.08);
+  color: #b9ff66;
+}
+
+.profile-dropdown > .profile-dropdown-logout {
+  color: #ff9292;
+}
+
+.profile-dropdown > .profile-dropdown-logout:hover {
+  background: rgba(255, 90, 90, 0.08);
+  color: #ffaaaa;
+}
+
+@media (max-width: 620px) {
+  .profile-dropdown {
+    right: -45px;
+    width: 230px;
+  }
+}

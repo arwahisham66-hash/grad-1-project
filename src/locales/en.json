@@ -1,0 +1,261 @@
+{
+  "axiom": {
+    "spatial": { "pause": "Pause rotation", "rotate": "Auto rotate", "reset": "Reset view", "drag": "Drag to orbit · Scroll to explore", "keyboard": "Interactive organ illustration. Drag or use the arrow keys to rotate." },
+    "nav": { "label": "Main navigation", "home": "Home", "platform": "Platform", "workspace": "3D Experience", "process": "Process", "dashboard": "Dashboard","team": "Team", "contact": "Contact", "launch": "Get started", "switchLanguage": "Switch language", "open": "Open menu", "close": "Close menu" },
+    "hero": { "eyebrow": "The future of pre-operative planning", "line1": "See deeper.", "line2": "Plan smarter.", "description": "AI-assisted 3D brain and liver surgical planning. Transform complex imaging into spatial understanding and explore risk-aware paths before the first incision.", "cta": "Enter the 3D experience", "secondary": "Discover the platform", "meta1": "3D anatomical insight", "meta2": "Risk-aware planning", "artAlt": "Glowing three-dimensional brain and liver medical visualization", "hudTop": "Brain / volumetric view", "hudBottom": "Liver / anatomical model", "scroll": "Scroll to explore" },
+    "strip": { "label": "Platform capabilities", "one": "AI-assisted analysis", "two": "3D spatial context", "three": "Path optimization" },
+    "overview": { "kicker": "The platform", "title1": "Clarity at every", "title2": "critical layer.", "description": "A connected planning experience that helps teams move from raw scans to an informed, three-dimensional view of anatomy and surgical approach." },
+    "experience": { "kicker": "Scroll to explore", "brain": { "label": "01 / Explore the brain", "title1": "Anatomy in", "title2": "your orbit.", "text": "Scroll to rotate a live 3D brain preview. Move your pointer to inspect its depth, contours, and a highlighted target." }, "transition": { "short": "Mapping", "label": "02 / Shift your perspective", "title1": "Follow the", "title2": "spatial story.", "text": "The scene moves with you, carrying the view from neurological anatomy toward the next planning context." }, "liver": { "label": "03 / Explore the liver", "title1": "A different organ.", "title2": "The same clarity.", "text": "Continue scrolling to reveal the liver model and its branching structures, with a proposed trajectory shown in 3D." }, "hint": "Move your pointer to guide the view · Scroll to transition", "view": "Live 3D preview", "target": "Target visualization", "continue": "See the planning console" },
+    "features": { "segmentation": { "title": "Intelligent segmentation", "text": "Bring regions of interest into focus with AI-assisted delineation of anatomy and suspected lesions." }, "reconstruction": { "title": "Spatial reconstruction", "text": "Explore brain and liver structures in a layered 3D context built for pre-operative review." }, "optimization": { "title": "Risk-aware pathways", "text": "Compare potential approaches with critical structures and surgical constraints in view." } },
+    "planner": { "kicker": "Inside the workspace", "title1": "A new perspective", "title2": "on precision.", "description": "Move between organ views and see how anatomy, risk context, and a proposed trajectory could come together in one interface.", "console": "planning console", "organ": "Organ view", "brain": "Brain", "liver": "Liver", "brainAlt": "Brain-focused 3D anatomical preview", "liverAlt": "Liver-focused 3D anatomical preview", "layers": "Visible layers", "layer1": "Anatomy", "layer2": "Region of interest", "layer3": "Trajectory", "previewNote": "Interactive design preview", "view": "3D view active", "panelTitle": "Planning context", "insight1": "Anatomical context", "insight1Text": "Review surrounding structures in relation to the target.", "insight2": "Risk visibility", "insight2Text": "Keep sensitive regions visible during route exploration.", "insight3": "Path review", "insight3Text": "Assess a proposed approach from multiple perspectives.", "next": "Prepare a case", "disclaimer": "Preview only · No clinical analysis" },
+    "workflow": { "kicker": "How it works", "title1": "From image data", "title2": "to informed action.", "description": "A clear sequence for bringing imaging, anatomy, and path planning into one reviewable workflow.", "import": { "title": "Import imaging", "text": "Begin with relevant brain or liver imaging and case data." }, "map": { "title": "Map anatomy", "text": "Identify the target and structures that matter to the approach." }, "explore": { "title": "Explore in 3D", "text": "Inspect spatial relationships in a layered visual workspace." }, "review": { "title": "Review the route", "text": "Compare a proposed path with the surrounding risk context." } },
+    "upload": { "kicker": "Start a case", "title1": "Bring your data", "title2": "into focus.", "description": "A streamlined entry point for future case analysis. Select a scan to preview the intake experience.", "point1": "Brain and liver planning views", "point2": "NIfTI and DICOM-ready interface", "point3": "Designed for careful clinical review", "preview": "Preview mode", "dropTitle": "Select imaging files", "dropText": "Choose a local file to see the case intake state.", "choose": "Choose a file", "remove": "Remove selected file", "note": "Files stay in your browser in this preview. Analysis is not connected yet." },
+    "team": { "kicker": "Our Team", "title1": "Built by people", "title2": "who think ahead.", "description": "A multidisciplinary team bringing AI, software, and interface design together for more thoughtful surgical planning.", "supervised": "Academic supervision" },
+    "contact": { "kicker": "Connect with us", "title1": "Let's shape", "title2": "what's next.", "description": "Interested in the project or have a question? Send the team a message.", "name": "Your name", "email": "Email address", "message": "Message" },
+    "footer": { "tagline": "AI-assisted surgical planning for a clearer view ahead.", "top": "Back to top" }},
+"dashboard": {
+  "title": "Patient Management",
+  "workspace": "Patient Management",
+  "patient": "Patient",
+  "addNew": "Add New",
+  "details": "Patient Details",
+  "description": "Manage patient records and imaging files.",
+  "addPatient": "Add Patient",
+  "totalPatients": "Total Patients",
+  "patientRecords": "Patient Records",
+  "mriScans": "MRI Scans",
+  "mriRecords": "MRI records",
+  "ctScans": "CT Scans",
+  "ctRecords": "CT records",
+  "pendingReview": "Pending Review",
+  "awaitingReview": "Awaiting review",
+  "allPatients": "All Patients",
+  "searchDescription": "Search and select a patient to view details.",
+  "searchPlaceholder": "Search patients...",
+  "clearSearch": "Clear search",
+  "recordId": "Record ID",
+  "age": "Age",
+  "scanType": "Scan Type",
+  "status": "Status",
+  "action": "Action",
+  "pending": "Pending",
+  "viewDetails": "View Details",
+  "noMatchingPatients": "No matching patients found.",
+  "showingRecords": "Showing {{shown}} of {{total}} records",
+  "patientInformation": "Patient Information",
+  "enterPatientInformation": "Enter patient information.",
+  "fullName": "Full Name",
+  "enterPatientName": "Enter patient name",
+  "closeForm": "Close form",
+  "cancel": "Cancel",
+  "savePatient": "Save Patient",
+  "patientAdded": "Patient added successfully.",
+  "backToPatients": "Back to Patients",
+  "analysisStatus": "Analysis Status",
+  "medicalImagingFiles": "Medical Imaging Files",
+  "selectImagingFiles": "Select DICOM or NIfTI files.",
+  "chooseImagingFiles": "Select imaging files",
+  "prepareAnalysis": "Prepare Analysis",
+  "localFilesNote": "Files remain in this browser preview.",
+  "aiAnalysis": "AI Analysis",
+  "analysisUnavailable": "Unavailable",
+  "analysisNotConnected": "Analysis is not connected yet. The selected files have not been sent for AI analysis.",
+  "footer": "Imaging Workspace",
+  "backHome": "Back to Home",
+  "eyebrow": "PATIENT & IMAGING MANAGEMENT"
+
+
+  },
+  "navbar": {
+    "home": "Home",
+    "overview": "Overview",
+    "get_started": "Get Started",
+    "about_us": "About Us",
+    "contact": "Contact"
+  },
+ 
+"hero": {
+  "eyebrow": "3D Surgical Planning",
+  "line1": "See deeper.",
+  "line2": "Plan smarter.",
+  "description": "Explore 3D brain and liver anatomy through an interactive surgical planning interface.",
+  "cta": "Explore the 3D Experience",
+  "secondary": "Discover AXIOM",
+  "meta1": "3D Visualization",
+  "meta2": "Planning Preview",
+  "artAlt": "3D medical visualization of the brain and liver",
+  "hudTop": "Brain / 3D View",
+  "hudBottom": "Liver / 3D Model",
+  "scroll": "Scroll to explore"
+},
+"strip": {
+  "label": "Platform Overview",
+  "one": "3D Visualization",
+  "two": "Anatomical Context",
+  "three": "Interactive Preview"
+},
+"overview": {
+  "kicker": "About AXIOM",
+  "title1": "From medical images",
+  "title2": "to 3D insight.",
+  "description": "Explore anatomical structures through an interactive 3D planning interface."
+},
+"features": {
+  "segmentation": {
+    "title": "Anatomical Segmentation",
+    "text": "Highlight important anatomical regions in the planning workflow."
+  },
+  "reconstruction": {
+    "title": "3D Reconstruction",
+    "text": "Explore brain and liver structures in a three-dimensional view."
+  },
+  "optimization": {
+    "title": "Pathway Visualization",
+    "text": "View proposed trajectories in the planning interface. Clinical path optimization is not yet available."
+  }
+},
+"planner": {
+  "kicker": "Explore the Interface",
+  "title1": "A clearer view",
+  "title2": "of anatomy.",
+  "description": "Switch between brain and liver previews and explore the interface.",
+  "console": "Planning Preview",
+  "organ": "Organ View",
+  "brain": "Brain",
+  "liver": "Liver",
+  "brainAlt": "3D brain visualization preview",
+  "liverAlt": "3D liver visualization preview",
+  "layers": "Visible Layers",
+  "layer1": "Anatomy",
+  "layer2": "Region of Interest",
+  "layer3": "Trajectory",
+  "previewNote": "Interactive Design Preview",
+  "view": "3D Preview Active",
+  "panelTitle": "Preview Information",
+  "insight1": "Anatomical View",
+  "insight1Text": "Explore the displayed anatomical structures.",
+  "insight2": "Visual Context",
+  "insight2Text": "View highlighted regions within the 3D scene.",
+  "insight3": "Pathway Preview",
+  "insight3Text": "Explore the displayed trajectory as a visual example.",
+  "next": "Explore Upload Preview",
+  "disclaimer": "Preview only · No clinical analysis"
+},
+"workflow": {
+  "kicker": "Workflow",
+  "title1": "Explore the",
+  "title2": "planning process.",
+  "description": "A visual overview of the steps envisioned for future case analysis.",
+  "import": {
+    "title": "Import Imaging",
+    "text": "Select a medical imaging file in the upload preview."
+  },
+  "map": {
+    "title": "Review Anatomy",
+    "text": "Explore anatomical structures in the available 3D views."
+  },
+  "explore": {
+    "title": "Explore in 3D",
+    "text": "Inspect the interactive visual models."
+  },
+  "review": {
+    "title": "Review the Preview",
+    "text": "View the proposed trajectory as a design example, not a clinical result."
+  }
+},
+"upload": {
+  "kicker": "Upload Preview",
+  "title1": "Your imaging,",
+  "title2": "ready to preview.",
+  "description": "Select a file to preview the upload interface. Medical image analysis is not connected yet.",
+  "point1": "Brain and liver visualizations",
+  "point2": "DICOM and NIfTI interface preview",
+  "point3": "For demonstration purposes only",
+  "preview": "Preview Mode",
+  "dropTitle": "Select an Imaging File",
+  "dropText": "Choose a local file to preview the upload state.",
+  "choose": "Choose File",
+  "remove": "Remove Selected File",
+  "note": "The selected file is not sent for medical analysis. Analysis is not connected yet."
+},
+"team": {
+  "kicker": "Our Team",
+  "title1": "Meet the people",
+"title2": "behind the project.",
+  "description": "A team project focused on 3D medical visualization and planning.",
+  "supervised": "Academic Supervision"
+ 
+ 
+
+},
+"contact": {
+  "kicker": "Contact",
+  "title1": "Get in",
+  "title2": "touch.",
+  "description": "Have a question about AXIOM? Send our team a message.",
+  "name": "Your Name",
+  "email": "Email Address",
+  "message": "Message",
+
+  "send_message": "Send us a message",
+  "name_placeholder": "Enter your name",
+  "email_placeholder": "Enter your email address",
+  "message_placeholder": "How can we help you?",
+  "submit_button": "Send Message"
+}
+,
+"footer": {
+  "tagline": "An interactive 3D medical planning preview.",
+  "top": "Back to Top"
+},
+"login": {
+  "welcome": "WELCOME BACK",
+  "enterWorkspace": "Enter your",
+  "workspace": "workspace.",
+  "description": "Sign in to access your medical workspace and continue your journey ",
+  "email": "Email address",
+  "password": "Password",
+  "passwordPlaceholder": "Enter your password",
+  "signIn": "Sign in",
+  "secureWorkspace": "SECURE MEDICAL WORKSPACE",
+  "poweredBy": "POWERED BY AXIOM",
+  "invalidEmail": "Please enter a valid email address.",
+  "shortPassword": "Password must be at least 6 characters.",
+  "switchToLight": "Switch to light mode",
+  "switchToDark": "Switch to dark mode",
+  "lightMode": "Light mode",
+  "darkMode": "Dark mode",
+  "togglePassword": "Toggle password visibility"
+},
+"profile": {
+  "backHome": "Back to Home",
+  "eyebrow": "ACCOUNT SETTINGS",
+  "my": "My",
+  "profileTitle": "Profile.",
+  "description": "Manage your personal information and professional details.",
+  "doctorName": "Doctor Name",
+  "medicalSpecialist": "Medical Specialist",
+  "activeAccount": "ACTIVE ACCOUNT",
+  "cancel": "Cancel",
+  "editProfile": "Edit Profile",
+  "personalInformation": "PERSONAL INFORMATION",
+  "editMode": "EDIT MODE",
+  "fullName": "Full Name",
+  "namePlaceholder": "Your full name",
+  "emailAddress": "Email Address",
+  "medicalSpecialty": "Medical Specialty",
+  "specialtyPlaceholder": "Your specialty",
+  "hospital": "Hospital / Organization",
+  "hospitalPlaceholder": "Hospital name",
+  "workplace": "Workplace / Location",
+  "workplacePlaceholder": "City or workplace address",
+  "pictureUrl": "Profile Picture URL",
+  "saveChanges": "Save Changes",
+  "accountAccess": "Account access",
+  "logoutDescription": "Sign out of your AXIOM workspace.",
+  "logout": "Logout"
+}
+
+
+
+}

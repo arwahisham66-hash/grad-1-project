@@ -1,0 +1,127 @@
+/* A continuous spatial backdrop, with content kept in the foreground. */
+.journey-field { position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.8; }
+.journey-field canvas { width:100%; height:100%; display:block; }
+.axiom-site .upload-section { background:radial-gradient(ellipse at 20% 50%,rgba(99,174,88,.1),transparent 44%),rgba(11,19,13,.76); }
+.axiom-site .contact-section { background:linear-gradient(180deg,rgba(16,29,18,.82),rgba(8,16,10,.72)); }
+
+/* Pointer tilt and scroll perspective shared by the content cards. */
+.axiom-site .depth-surface { position:relative; transform-style:preserve-3d; overflow:visible; transition:border-color .25s,box-shadow .25s; }
+.depth-surface::after { content:''; position:absolute; inset:0; pointer-events:none; border-radius:inherit; background:radial-gradient(circle at var(--glare-x,50%) var(--glare-y,50%),rgba(185,255,102,.1),transparent 58%); opacity:0; transition:opacity .35s; }
+.depth-surface:hover::after { opacity:1; }
+.depth-surface > .feature-top,.depth-surface > h3,.depth-surface > .workflow-step-head,.depth-surface > .contact-card-heading { transform:translateZ(22px); }
+.depth-surface > .feature-graphic { transform:translateZ(38px); }
+.depth-surface > img { transform:translateZ(15px); }
+.depth-surface > .feature-arrow { transform:translateZ(42px); }
+.axiom-site .team-card:hover { box-shadow:0 18px 45px rgba(0,0,0,.25); }
+.hero-depth-object { width:100%; height:100%; position:relative; display:flex; align-items:center; justify-content:center; transform-style:preserve-3d; }
+.hero-depth-object .organ-artwork { translate:0 0 48px; }
+.hero-depth-object .hud-label-top { transform:translateZ(95px); }
+.hero-depth-object .hud-label-bottom { transform:translateZ(115px); }
+.hero-depth-object .visual-coordinate { transform:translateZ(65px); }
+.hero-depth-object .visual-ring-outer { rotate:x 36deg; translate:0 0 -65px; }
+.hero-depth-object .visual-ring-inner { rotate:y -43deg; translate:0 0 15px; }
+.hero-depth-object .visual-corner { transform:translateZ(35px); }
+.axiom-site .feature-graphic { perspective:650px; transform-style:preserve-3d; }
+.feature-graphic-segmentation span { animation:slice-drift 5s ease-in-out infinite alternate; }
+.feature-graphic-segmentation span:nth-child(2) { animation-delay:-1.8s; }
+.feature-graphic-segmentation span:nth-child(3) { animation-delay:-3.3s; }
+.feature-graphic-reconstruction { animation:graphic-orbit 14s ease-in-out infinite alternate; }
+.feature-graphic-optimization span { animation:target-depth 4s ease-in-out infinite alternate; }
+
+/* A stack of individual scan planes that separates as the page scrolls. */
+.scan-sculpture { position:relative; height:300px; width:100%; perspective:900px; margin:12px 0 -15px; }
+.scan-assembly { position:absolute; inset:0; transform-style:preserve-3d; }
+.scan-planes { position:absolute; top:46%; left:50%; width:225px; height:185px; margin:-92px 0 0 -112px; transform-style:preserve-3d; }
+.scan-plane { position:absolute; inset:0; border:1px solid rgba(185,255,102,.5); background:linear-gradient(145deg,rgba(43,80,39,.42),rgba(8,27,16,.4)); box-shadow:0 0 25px rgba(142,255,102,.045),inset 0 0 35px rgba(140,255,103,.035); backface-visibility:visible; }
+.scan-plane::before { content:''; position:absolute; inset:12px; border:1px solid rgba(185,255,102,.08); background-image:linear-gradient(rgba(185,255,102,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(185,255,102,.07) 1px,transparent 1px); background-size:22px 22px; }
+.scan-plane svg { position:absolute; inset:0; width:100%; height:100%; stroke:#b9ff66; stroke-width:1.1; fill:rgba(185,255,102,.025); }
+.scan-plane svg path:nth-child(2) { opacity:.5; }
+.scan-plane svg circle { fill:rgba(185,255,102,.4); stroke:#dbffc6; }
+.scan-plane > span { position:absolute; bottom:8px; left:9px; color:#b9ff66; font:8px 'Space Grotesk',sans-serif; }
+.scan-cross { position:absolute; top:9px; right:9px; width:8px; height:8px; border-top:1px solid #b9ff66; border-right:1px solid #b9ff66; }
+.scan-shadow { position:absolute; width:60%; height:42px; bottom:38px; left:20%; background:radial-gradient(ellipse,rgba(128,255,92,.15),transparent 70%); filter:blur(12px); pointer-events:none; }
+.sculpture-coordinate { position:absolute; bottom:16px; left:50%; transform:translateX(-50%); color:#709c78; font:9px 'Space Grotesk',sans-serif; letter-spacing:.16em; white-space:nowrap; }
+
+/* Scan > volume > trajectory, represented as three dimensional objects. */
+.spatial-pipeline { display:grid; grid-template-columns:1fr 70px 1fr 70px 1fr; align-items:center; padding:20px 25px 36px; margin:0 0 60px; border:1px solid rgba(185,255,102,.15); background:radial-gradient(ellipse at 50% 80%,rgba(94,160,73,.09),transparent 75%),rgba(8,18,12,.58); transform-style:preserve-3d; }
+.pipeline-station { min-width:0; text-align:center; perspective:900px; transform-style:preserve-3d; }
+.pipeline-station > span { color:#95b59b; font:600 10px 'Space Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; display:block; transform:translateZ(24px); }
+.scan-sculpture.is-compact { height:240px; margin:0; }
+.is-compact .scan-planes { width:165px; height:135px; margin:-45px 0 0 -82px; }
+.is-compact .sculpture-coordinate { display:none; }
+.is-compact .scan-shadow { bottom:22px; }
+.pipeline-connector { display:flex; gap:8px; align-items:center; justify-content:center; transform:translateZ(30px); }
+.pipeline-connector i { width:5px; height:5px; background:#b9ff66; box-shadow:0 0 12px #a2ff67; border-radius:50%; animation:signal-travel 2.4s ease-in-out infinite; }
+.pipeline-connector i:nth-child(2) { animation-delay:.25s; }.pipeline-connector i:nth-child(3) { animation-delay:.5s; }
+.voxel-system { width:132px; height:132px; position:relative; margin:56px auto 52px; transform-style:preserve-3d; transform:rotateX(58deg) rotateZ(-38deg); animation:volume-turn 14s ease-in-out infinite alternate; }
+.voxel-system i { position:absolute; inset:0; background:rgba(85,155,60,.045); border:1px solid rgba(185,255,102,.4); transform:translateZ(calc(var(--voxel) * 13px - 52px)); box-shadow:inset 0 0 25px rgba(185,255,102,.025); }
+.voxel-system i::before,.voxel-system i::after { content:''; position:absolute; border:1px solid rgba(185,255,102,.28); inset:28%; border-radius:44% 53% 41% 50%; }
+.voxel-system i::after { inset:42%; background:rgba(185,255,102,.13); border-radius:50%; }
+.path-system { position:relative; width:210px; height:240px; margin:auto; transform-style:preserve-3d; animation:path-orbit 16s ease-in-out infinite alternate; }
+.path-system > i { position:absolute; width:150px; height:150px; left:30px; top:45px; border:1px solid rgba(185,255,102,.5); border-radius:50%; transform:rotateX(55deg) rotateY(-20deg); }
+.path-system > i:nth-child(2) { transform:rotateY(65deg) rotateX(-15deg); border-style:dashed; }
+.path-system > i:nth-child(3) { transform:rotateX(-20deg) rotateY(-35deg); border-color:rgba(185,255,102,.2); }
+.path-system b { position:absolute; width:22px; height:22px; border-radius:50%; top:109px; left:94px; background:radial-gradient(circle at 30% 25%,#efffe4,#b9ff66 35%,#50832f); box-shadow:0 0 35px rgba(185,255,102,.7); transform:translateZ(30px); }
+.path-system > span { position:absolute; left:13px; top:150px; width:185px; height:1px; background:linear-gradient(90deg,transparent,#b9ff66); transform:rotate(-29deg) translateZ(30px); box-shadow:0 0 14px #b9ff66; }
+
+/* Final sculptural mark. */
+.orbit-signature { position:relative; width:min(100%,390px); height:265px; margin:25px 0 -15px; transform-style:preserve-3d; }
+.orbit-signature > i { position:absolute; left:calc(50% - 100px); top:20px; width:200px; height:200px; border:1px solid rgba(185,255,102,.5); border-radius:50%; transform:rotateX(60deg) rotateY(-25deg); }
+.orbit-signature > i:nth-of-type(2) { transform:rotateY(65deg) rotateX(-22deg); animation:signature-orbit 16s linear infinite; }
+.orbit-signature > i:nth-of-type(3) { transform:rotateX(-30deg) rotateY(22deg); border-style:dashed; opacity:.4; }
+.signature-core { position:absolute; left:calc(50% - 40px); top:65px; width:80px; text-align:center; font-size:80px; line-height:1.2; color:#b9ff66; text-shadow:0 0 45px rgba(185,255,102,.35); transform:translateZ(40px); }
+.signature-dot { position:absolute; width:8px; height:8px; border-radius:50%; left:calc(50% + 85px); top:100px; background:#dcffae; box-shadow:0 0 20px #b9ff66; transform:translateZ(40px); }
+.signature-coordinate { position:absolute; inset:auto 0 12px; text-align:center; color:#719b78; font:8px 'Space Grotesk',sans-serif; letter-spacing:.17em; }
+
+/* Functional controls for the live organ viewport. */
+.axiom-site .layer-list { gap:8px; }
+.layer-list button { display:flex; align-items:center; gap:9px; width:100%; min-height:34px; padding:7px 5px; border:1px solid transparent; background:none; color:#b9cfb9; text-align:start; font-size:11px; cursor:pointer; }
+.layer-list button:hover { border-color:rgba(185,255,102,.2); background:rgba(185,255,102,.035); }
+.layer-list button[aria-pressed="false"] { color:#638169; }
+.layer-list button[aria-pressed="false"] i { opacity:.3; }
+.layer-list button svg { flex:none; }
+.console-stage .immersive-render { inset:50px 0 66px; touch-action:pan-y; }
+.immersive-render { touch-action:pan-y; }
+.immersive-render:focus-visible { outline:1px solid #b9ff66; outline-offset:-4px; }
+.console-stage .stage-topline,.console-stage .stage-caption { pointer-events:none; }
+.console-stage .stage-caption { bottom:14px; font-size:9px; }
+.stage-controls { position:absolute; bottom:39px; inset-inline:15px; z-index:4; display:flex; justify-content:center; gap:7px; }
+.stage-controls button { border:1px solid rgba(185,255,102,.22); background:rgba(10,27,14,.88); padding:8px 10px; color:#b9d8b4; display:flex; align-items:center; gap:7px; cursor:pointer; font:600 9px 'Space Grotesk',sans-serif; letter-spacing:.03em; backdrop-filter:blur(8px); }
+.stage-controls button:hover { color:#d8ffb2; border-color:#a1dc6b; }
+.stage-controls button[aria-pressed="true"] { color:#b9ff66; }
+
+@keyframes slice-drift { from { translate:0 4px -15px; rotate:y -20deg; } to { translate:0 -7px 25px; rotate:y 25deg; } }
+@keyframes graphic-orbit { from { rotate:y -15deg; } to { rotate:y 25deg; } }
+@keyframes target-depth { from { translate:0 0 0; } to { translate:0 -6px 24px; } }
+@keyframes signal-travel { 0%,70%,100% { opacity:.2; transform:scale(.6); } 35% { opacity:1; transform:scale(1.2); } }
+@keyframes volume-turn { to { transform:rotateX(65deg) rotateZ(32deg); } }
+@keyframes path-orbit { from { transform:rotateY(-18deg) rotateX(8deg); } to { transform:rotateY(25deg) rotateX(-10deg); } }
+@keyframes signature-orbit { to { transform:rotateY(425deg) rotateX(-22deg); } }
+@media(max-width:900px) {
+  .spatial-pipeline { grid-template-columns:1fr 30px 1fr 30px 1fr; padding-inline:10px; }
+  .path-system { width:180px; }
+  .path-system > i { left:15px; }.path-system b { left:79px; }.path-system > span { left:0; }
+  .upload-copy .scan-sculpture { width:min(440px,100%); margin-top:35px; }
+}
+@media(max-width:620px) {
+  .journey-field { opacity:.55; }
+  .hero-depth-object .hud-label { transform:translateZ(30px); }
+  .hero-depth-object .organ-artwork { translate:0 0 15px; }
+  .spatial-pipeline { grid-template-columns:1fr; padding:10px 15px 30px; gap:10px; margin-bottom:45px; }
+  .pipeline-connector { height:40px; transform:rotate(90deg); }
+  .pipeline-station { width:100%; }
+  .voxel-system { margin-block:65px 58px; }
+  .pipeline-station > span { font-size:9px; }
+  .scan-sculpture.is-compact { height:225px; }
+  .scan-sculpture { height:270px; }
+  .axiom-site .console-sidebar .layer-list { display:flex; flex-wrap:wrap; gap:5px; margin-top:12px; }
+  .layer-list button { width:auto; flex:1 1 auto; justify-content:center; gap:6px; font-size:9px; padding:5px; border-color:rgba(185,255,102,.12); }
+  .layer-list button svg { width:12px; margin-inline-start:0; }
+  .console-stage .stage-caption { font-size:8px; inset-inline:12px; }
+  .orbit-signature { height:245px; margin-inline:auto; }
+  .depth-surface > img,.depth-surface > .feature-graphic { transform:translateZ(10px); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .journey-field { display:none; }
+  .depth-surface,.hero-depth-object,.scan-assembly,.spatial-pipeline,.orbit-signature { transform:none !important; }
+}
